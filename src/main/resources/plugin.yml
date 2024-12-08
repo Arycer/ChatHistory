@@ -1,0 +1,11 @@
+name: ChatHistory
+version: 1.0
+description: A plugin that allows you to see the chat history of a player
+author: dxxxxy
+main: me.arycer.chathistory.ChatHistoryPlugin
+api-version: 1.8.8
+commands:
+  chathistory:
+    description: Sees the chat history of a player
+    usage: /<command> <player>
+    permission: chathistory.check_player
