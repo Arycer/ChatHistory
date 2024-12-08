@@ -2,6 +2,7 @@ package me.arycer.chathistory;
 
 import me.arycer.chathistory.command.ChatHistoryCommand;
 import me.arycer.chathistory.event.EventListener;
+import me.arycer.chathistory.io.ChatStorage;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class ChatHistoryPlugin extends JavaPlugin {
@@ -15,6 +16,7 @@ public class ChatHistoryPlugin extends JavaPlugin {
         getLogger().info(String.format("%s has been enabled!", PLUGIN_NAME));
         getServer().getPluginManager().registerEvents(EventListener.INSTANCE, this);
         getCommand("chathistory").setExecutor(ChatHistoryCommand.INSTANCE);
+        ChatStorage.INSTANCE.load();
     }
 
     @Override
